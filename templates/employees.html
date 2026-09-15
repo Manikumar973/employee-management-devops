@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee List</title>
+</head>
+
+<body>
+
+    <h1>Employee Management</h1>
+
+    <a href="/add">Add New Employee</a>
+
+    <br><br>
+
+    <table border="1" cellpadding="10">
+
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Salary</th>
+        </tr>
+
+        {% for employee in employees %}
+
+        <tr>
+            <td>{{ employee["id"] }}</td>
+            <td>{{ employee["name"] }}</td>
+            <td>{{ employee["email"] }}</td>
+            <td>{{ employee["department"] }}</td>
+            <td>{{ employee["salary"] }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+    <br>
+
+    <a href="/">Back to Home</a>
+
+</body>
+</html>
